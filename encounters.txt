@@ -1,0 +1,2 @@
+1centipede 2rat 3roach 3rat false
+4rat 2roach 4roach 6roach true
