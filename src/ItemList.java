@@ -69,11 +69,12 @@ public class ItemList {
 		}
 		//Converts the ArrayList of slots into a plain array of objects, then makes sure that each object in the array is a String
 		Object[] types = slots.toArray();
+		String[] typesStringify = new String[types.length];
 		for(int i = 0; i < types.length; i++) {
-			types[i] = types[i].toString();
+			typesStringify[i] = types[i].toString();
 		}
 		//Converts all stat values from String to int, the isRange marker from String to int, and adds a new Item to the item list using the gathered data.
-		this.items.add(new Item(atts.get(0), types, Integer.parseInt(atts.get(1)), Integer.parseInt(atts.get(2)), Integer.parseInt(atts.get(3)), Integer.parseInt(atts.get(4)), new Boolean(atts.get(5))));
+		this.items.add(new Item(atts.get(0), typesStringify, Integer.parseInt(atts.get(1)), Integer.parseInt(atts.get(2)), Integer.parseInt(atts.get(3)), Integer.parseInt(atts.get(4)), new Boolean(atts.get(5))));
 	}
 	
 	
@@ -83,10 +84,10 @@ public class ItemList {
 		public int movement;
 		public int lore;
 		public boolean isRange;
-		public Object[] types;
+		public String[] types;
 		public String name;
 	
-		public Item(String name, Object[] types, int att, int def, int move, int lore, boolean range) {
+		public Item(String name, String[] types, int att, int def, int move, int lore, boolean range) {
 			this.name = name;
 			this.types = types;
 			this.attack = att;

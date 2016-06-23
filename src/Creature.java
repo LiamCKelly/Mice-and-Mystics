@@ -11,6 +11,20 @@ public class Creature {
 		this.type = "default";
 	}
 	
+	public String toString() {
+		String returner = "";
+		returner += this.name + "\n";
+		returner += "Type: " + this.type + "\n";
+		returner += "Health: " + this.health + "\n";
+		returner += "Attack: " + this.attack + "\n";
+		returner += "Defense: " + this.defense + "\n";
+		returner += "Lore: " + this.lore + "\n";
+		returner += "Movement: " + this.movement + "\n";
+		return returner;
+	}
+	
+	//Code for other types of NPC creatures
+	
 	static class Roach extends Creature {
 		public Roach() {
 			super.movement = 0;

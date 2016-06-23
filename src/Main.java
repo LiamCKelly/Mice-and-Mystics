@@ -8,6 +8,14 @@ public class Main {
 		printEach(game.getEncounterDeck());
 		printEach(game.getBoardDeck());
 		printEach(game.getItemDeck());
+		
+		//Testing equipping/unequipping items
+		Character test = new Character("Liam", 0, 0, 0, 0, 0);
+		test.equip(game.getItemDeck().get(0));
+		System.out.println(test.toString());
+		test.unequip(game.getItemDeck().get(0));
+		System.out.println("AGAIN");
+		System.out.println(test.toString());
 	}
 	
 	private static void printEach(ArrayList<?> list) {
