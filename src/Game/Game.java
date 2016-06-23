@@ -1,13 +1,20 @@
+package Game;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import Board.Board;
+import Decks.BoardDeck;
+import Decks.Encounters;
+import Decks.ItemList;
+import Entities.Creature;
 
 
 public class Game {
 	private ArrayList<Board> boardDeck;
 	private ArrayList<Encounters.Encounter> encounterDeck;
 	private ArrayList<ItemList.Item> itemDeck; 
-	private ArrayList<Creature> turnOrder;
-	private ArrayList<Creature> characterList;
+	private ArrayList<Creature> turnOrder = new ArrayList<Creature>();
+	private ArrayList<Creature> characterList = new ArrayList<Creature>();
 	private int currentPage;
 	private int maxPage;
 	private int surgeCount;
@@ -36,7 +43,13 @@ public class Game {
 	public ArrayList<Creature> getTurnOrder() {
 		return this.turnOrder;
 	}
+	public ArrayList<Creature> getChars() {
+		return this.characterList;
+	}
 	public boolean isWon() {
 		return this.isWon;
+	}
+	public void addChars(Creature newChar) {
+		this.characterList.add(newChar);
 	}
 }

@@ -1,3 +1,4 @@
+package Decks;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -78,7 +79,7 @@ public class ItemList {
 	}
 	
 	
-	static class Item {
+	public static class Item {
 		public int attack;
 		public int defense;
 		public int movement;

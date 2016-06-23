@@ -1,4 +1,8 @@
+package Entities;
 import java.util.HashMap;
+
+import Decks.ItemList;
+import Decks.ItemList.Item;
 
 
 public class Character extends Creature{

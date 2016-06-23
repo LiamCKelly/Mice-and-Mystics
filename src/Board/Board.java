@@ -1,3 +1,4 @@
+package Board;
 
 public class Board {
 	private Tile[][] tileset;
@@ -25,12 +26,25 @@ public class Board {
 	public void setWestBoasrd(Board board) {
 		this.westBoard = board;
 	}
+	public Tile[][] getTileset() {
+		return this.tileset;
+	}
+	public void setTileset(Tile[][] set) {
+		this.tileset = set;
+	}
 	
 	public String toString() {
 		String returner = "";
 		for(int y = 0; y < this.tileset.length; y++) {
 			for(int x = 0; x < this.tileset[0].length; x++) {
-				returner += "[" + this.tileset[y][x].getType() + "]    ";
+				returner += "[" + this.tileset[y][x].getType();
+				if(this.tileset[y][x].hasCreatures()) { 
+					returner += "*";
+				}
+				if(this.tileset[y][x].isFull()) {
+					returner += "*";
+				}
+				returner += "]    ";
 			}
 			returner += "\n";
 		}

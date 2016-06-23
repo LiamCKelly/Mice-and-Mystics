@@ -1,3 +1,4 @@
+package Entities;
 import java.util.Random;
 
 
@@ -38,6 +39,11 @@ public class Dice {
 		}
 		public boolean isSpecial() {
 			return special;
+		}
+		public String toString() {
+			String returner = "";
+			returner += this.value + " .:. " + this.type + " .:. " + (this.special ? "*" : "");
+			return returner;
 		}
 	}
 }

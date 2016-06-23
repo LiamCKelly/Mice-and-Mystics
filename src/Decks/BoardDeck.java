@@ -1,9 +1,16 @@
+package Decks;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+
+import Board.Board;
+import Board.Tile;
+import Board.Tile.EnemySpawnTile;
+import Board.Tile.FlipTile;
+import Board.Tile.PlayerSpawnTile;
 
 public class BoardDeck {
 	private ArrayList<Board> boards = new ArrayList<Board>();

@@ -1,3 +1,4 @@
+package Decks;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -44,7 +45,7 @@ public class Encounters {
 	
 	
 	//Encounter class code
-	static class Encounter {
+	public static class Encounter {
 		private boolean hasTraps;
 		private ArrayList<String> enemyTypes;
 		private ArrayList<Integer> enemyCounts;
