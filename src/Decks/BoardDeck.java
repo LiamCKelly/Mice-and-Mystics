@@ -8,13 +8,10 @@ import java.util.ArrayList;
 
 import Board.Board;
 import Board.Tile;
-import Board.Tile.EnemySpawnTile;
-import Board.Tile.FlipTile;
-import Board.Tile.PlayerSpawnTile;
 
 public class BoardDeck {
 	private ArrayList<Board> boards = new ArrayList<Board>();
-	public BoardDeck(String filename) throws IOException {
+	public BoardDeck(String filename) throws IOException, FileNotFoundException {
 		File in = new File(filename);
 		BufferedReader input = new BufferedReader(new FileReader(in));
 		String nextLine;
@@ -55,6 +52,8 @@ public class BoardDeck {
 		}
 		//Converts the ArrayList of Tile objects into a full 2D array
 		int arrayPos = 0;
+		//Bad programmer assumes a board will always be square.
+		//But I make the boards so fuck you, I am allowed to do this!
 		int length = (int) Math.sqrt(tiles.size());
 		Tile[][] tileSet = new Tile[length][length];
 		for(int y = 0; y < length; y++) {

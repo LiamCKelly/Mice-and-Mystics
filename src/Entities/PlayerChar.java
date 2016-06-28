@@ -2,13 +2,12 @@ package Entities;
 import java.util.HashMap;
 
 import Decks.ItemList;
-import Decks.ItemList.Item;
 
 
-public class Character extends Creature{
+public class PlayerChar extends Creature{
 	//Inventory goes by (slot type, item) convention
 	private HashMap<String, ItemList.Item> inventory = new HashMap<String, ItemList.Item>();
-	public Character(String name, int move, int hp, int att, int def, int lore) {
+	public PlayerChar(String name, int move, int hp, int att, int def, int lore) {
 		super.movement = move;
 		super.health = hp;
 		super.attack = att;

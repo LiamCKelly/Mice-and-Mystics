@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Dice {
 	private Random roller = new Random();
-	private Face[] faces;
+	private Face[] faces = new Face[6];
 	public Dice() {
 		this.faces[0] = new Face(1, "cheese", false);
 		this.faces[1] = new Face(2, "range", false);
@@ -12,6 +12,12 @@ public class Dice {
 		this.faces[3] = new Face(1, "melee", false);
 		this.faces[4] = new Face(2, "melee", true);
 		this.faces[5] = new Face(3, "defend", true);
+	}
+	
+	//debug constructor with a seed for RNG
+	public Dice(long seed) {
+		this();
+		this.roller = new Random(seed);
 	}
 	
 	public Face[] getRolls(int numRolls) {
@@ -22,7 +28,7 @@ public class Dice {
 		return returner;
 	}
 	
-	static class Face {
+	public static class Face {
 		private int value;
 		private String type;
 		private boolean special;
